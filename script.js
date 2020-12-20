@@ -5,10 +5,26 @@ var keys3 = ["Z", "X", "C", "V", "B", "N", "M"];
 var row1 = document.querySelector(".row1");
 var row2 = document.querySelector(".row2");
 //var row3 = document.querySelector(".row3");
+//Numbers and symbols
 
+var num = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 0], ["[", "]", "{", "}", "#", "%", "^", "*", "+", "="]];
+var sym1 = [["-", "/", ":", ";", "(", ")", "$", "&", "@", '"'], 
+["_", "\\", "|", "~", "<", ">", "€", "£", "¥","•"]];
+var numToggle = "#+=";
+
+var toggleChar = document.querySelector(".num");
+
+toggleChar.addEventListener("click", ()=>{
+  if(toggleChar.textContent === "123")
+ toggleChar.textContent = "ABC";
+ else toggleChar.textContent= "123"  
+  })
 for (let i = 0; i < keys1.length; i++) {
-  var button = document.createElement("button");
-  button.innerHTML = keys1[i].toLowerCase();
+ var button = document.createElement("button");
+  if (toggleChar.textContent === "123")
+  button.textContent = keys1[i].toLowerCase();
+  else if (toggleChar.textContent === "ABC") 
+  button.textContent = num[0][i];
   button.className = "key";
   row1.appendChild(button);
 }
@@ -83,3 +99,6 @@ enter.addEventListener("click", () => {
   let Break = "<br>";
   display.innerHTML += Break;
 });
+
+
+
