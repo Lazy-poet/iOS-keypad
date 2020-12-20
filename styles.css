@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #eee;
+  font-family: 'Rubik', sans-serif;
+}
+.container {
+  margin-top: 50%;
+  transform: translateY(-25%);
+  max-width: 324px;
+}
+.display {
+  height: 150px;
+  margin-bottom: 20px;
+  background-color: #fefeff;
+  padding: 10px;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d0d3d9;
+  padding: 4px 2px;
+  position: relative;
+  border-radius: 5px;
+}
+.row1 > .key,
+.row2 > .key,
+.row3 > .key {
+  width: 28px;
+  height: 35px;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+}
+.row3 {
+  display: flex;
+  align-items: center;
+}
+.bxs-up-arrow-alt {
+  font-size: 2rem;
+  filter: drop-shadow(0px 0px 2px #000);
+  color: #fff;
+  margin-left: -2px;
+  margin-top: 2px;
+}
+.material-icons {
+  filter: drop-shadow(0px 0px 2px #000);
+  font-size: 1.2rem !important;
+  color: #fff;
+  margin-top: 3px;
+}
+.row3 .capsLock {
+  width: 35px !important;
+  position: absolute;
+  left: 4px;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fefeff;
+}
+
+.row3 .backspace {
+  width: 35px !important;
+  position: absolute;
+  right: 4px;
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fefeff;
+}
+
+.row4 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 100%;
+}
+.row4 button {
+  height: 35px;
+  border: none;
+  border-radius: 4px;
+  margin: 4px 2px;
+}
+
+.row4 button:first-child,
+.row4 button:last-child {
+  background-color: #b3b7c1;
+}
+.key,
+.space {
+  margin: 4px 2px;
+  background-color: #fefeff;
+  font-size: 14px;
+}
+.key:focus {
+  transform: translateY(-5px);
+}
+.upperCase {
+  color: #000;
+  filter: none;
+}
